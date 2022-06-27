@@ -1,0 +1,436 @@
+.source {
+
+    circle {
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-duration: 24s;
+        animation-delay: 0s;
+        transform-origin: center;
+        transform-box: fill-box;
+        will-change: transform;
+        opacity: 0;
+
+        &.st6 {
+            animation-name: source_ani5;
+        }
+
+        &.st7 {
+            animation-name: source_ani2;
+        }
+
+        &.st8 {
+            animation-name: source_ani3;
+        }
+
+        &.st9 {
+            animation-name: source_ani4;
+        }
+
+        &.st5 {
+            animation-name: source_ani;
+        }
+    }
+
+}
+
+@keyframes source_ani {
+
+    0% {
+        transform: scale(0.01);
+        opacity: 0;
+    }
+
+    4% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    12% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    20% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.target {
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 24s;
+    animation-delay: 0s;
+    transform-origin: center;
+    transform-box: fill-box;
+    will-change: transform;
+    animation-name: target_ani;
+    opacity: 0;
+}
+
+
+@keyframes target_ani {
+
+    0% {
+        transform: scale(0.01);
+        opacity: 0;
+    }
+
+    2% {
+        transform: scale(0.01);
+        opacity: 0;
+    }
+
+    6% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    14% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    18% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes source_ani2 {
+
+    0% {
+        transform: scale(0.1);
+        opacity: 0.1;
+    }
+
+    4% {
+        opacity: 0.1;
+    }
+
+    10% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes source_ani3 {
+
+    0% {
+        transform: scale(0.1);
+        opacity: 0.2;
+    }
+
+    2% {
+        opacity: 0.2;
+    }
+
+    6% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes source_ani4 {
+
+    0% {
+        transform: scale(0.1);
+        opacity: 0.3;
+    }
+
+    2% {
+        opacity: 0.3;
+    }
+
+    3% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes source_ani5 {
+
+    0% {
+        transform: scale(0.1);
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 0.1;
+    }
+
+    4% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+
+    20% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.outline {
+    stroke-dashoffset: -500;
+    stroke-dasharray: 500;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 24s;
+    animation-delay: 0s;
+    transform-origin: center;
+    transform-box: fill-box;
+    will-change: transform;
+    animation-name: outline;
+    opacity: 0;
+
+}
+
+
+@keyframes outline {
+
+    0% {
+        stroke-dashoffset: -500;
+        opacity: 0;
+        stroke-width: 0;
+    }
+
+    4% {
+        stroke-dashoffset: 0;
+        opacity: 0.5;
+        stroke-width: 3;
+    }
+
+    10% {
+        stroke-dashoffset: 0;
+        opacity: 0.5;
+        stroke-width: 3;
+    }
+
+    20% {
+        stroke-dashoffset: 500;
+        opacity: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+}
+
+
+
+
+.dashed {
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 24s;
+    animation-delay: 0s;
+    transform-origin: center;
+    transform-box: fill-box;
+    will-change: transform;
+    stroke-dashoffset: 0;
+    animation-name: dashed;
+    opacity: 0;
+}
+
+
+@keyframes dashed {
+
+    0% {
+        opacity: 0;
+        stroke-width: 0;
+        stroke-dashoffset: 0;
+    }
+
+    2% {
+        opacity: 0;
+        stroke-width: 0;
+    }
+
+    4% {
+        opacity: 1;
+        stroke-width: 1;
+    }
+
+    10% {
+        opacity: 1;
+        stroke-width: 1;
+    }
+
+    14% {
+        stroke-width: 0;
+    }
+
+    40%,
+    100% {
+        opacity: 0;
+        stroke-width: 0;
+        stroke-dashoffset: 100;
+    }
+}
+
+
+.shadow {
+    filter: blur(3px);
+
+    stroke-dashoffset: 500;
+    stroke-dasharray: 500;
+
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 24s;
+    animation-delay: 0s;
+    transform-origin: center;
+    transform-box: fill-box;
+    will-change: transform;
+    animation-name: shadow;
+}
+
+
+
+@keyframes shadow {
+
+    0% {
+        stroke-dashoffset: -500;
+        opacity: 0;
+        stroke-width: 0;
+    }
+
+    4% {
+        stroke-dashoffset: 0;
+        opacity: 0.5;
+        stroke-width: 3;
+    }
+
+    10% {
+        stroke-dashoffset: 0;
+        opacity: 0.5;
+        stroke-width: 3;
+    }
+
+    20%,
+    100% {
+        stroke-dashoffset: 500;
+        opacity: 0;
+    }
+}
+
+
+
+.arrow {
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 24s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    will-change: transform;
+    animation-name: arrow_animation;
+    opacity: 0;
+}
+
+
+@keyframes arrow_animation {
+
+    0% {
+        offset-distance: 100%;
+        opacity: 0;
+        transform: scale(0.25);
+    }
+
+    4% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    12% {
+        transform: scale(0.25);
+        offset-distance: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(0.25);
+        offset-distance: 0%;
+        opacity: 0;
+    }
+}
+
+
+#arrow_1 {
+    offset-path: path("M177.5,110.5c75.2-68.8,242-40.1,297.5,26.5");
+}
+
+#arrow_2 {
+    offset-path: path("M131.8,139.3c75.2-68.8,224.3-32.3,279.8,34.3");
+}
+
+#arrow_3 {
+    offset-path: path("M220.9,172.7 c110.3-102.2,340-101.9,419.6-67.6");
+}
+
+#arrow_4 {
+    offset-path: path("M622.3,249.5 c-75.2-68.8-319.4-79.4-374.9-12.8");
+}
+
+#arrow_5 {
+    offset-path: path("M386,62.5C310.9-6.3,185.3,9.1,129.8,75.7");
+}
+
+#arrow_6 {
+    offset-path: path("M427.2,149.3 c-75.2-68.8-197.6-57.5-253.1,9.1");
+}
+
+#arrow_7 {
+    offset-path: path("M215.6,78.1 c147.5-29.6,375.1,84.2,425.1,155");
+}
+
+#arrow_8 {
+    offset-path: path("M234.8,186.5c39-94.1,215.9-151.4,294.4-114.6");
+}

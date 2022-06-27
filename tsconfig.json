@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es2015", "dom"],
+    "baseUrl": "./src/assets/js",
+  },
+  "exclude": [
+    "vendor",
+    "node_modules"
+  ]
+}
