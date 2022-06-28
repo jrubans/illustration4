@@ -34,6 +34,10 @@ body {
   overflow: visible !important;
 }
 
+.source {
+  z-index: 99;
+  position: relative;
+}
 .source circle {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
@@ -45,7 +49,7 @@ body {
           animation-delay: 0s;
   transform-origin: center;
   transform-box: fill-box;
-  will-change: transform;
+  will-change: transform, opacity;
   opacity: 0;
 }
 .source circle.st6 {
@@ -123,10 +127,12 @@ body {
           animation-delay: 0s;
   transform-origin: center;
   transform-box: fill-box;
-  will-change: transform;
+  will-change: transform, opacity;
   -webkit-animation-name: target_ani;
           animation-name: target_ani;
   opacity: 0;
+  position: relative;
+  z-index: 99;
 }
 
 @-webkit-keyframes target_ani {
@@ -334,28 +340,9 @@ body {
     opacity: 0;
   }
 }
-.outline {
-  stroke-dashoffset: -500;
-  stroke-dasharray: 500;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 24s;
-          animation-duration: 24s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  transform-origin: center;
-  transform-box: fill-box;
-  will-change: transform;
-  -webkit-animation-name: outline;
-          animation-name: outline;
-  opacity: 0;
-}
-
 @-webkit-keyframes outline {
   0% {
-    stroke-dashoffset: -500;
+    stroke-dashoffset: -750;
     opacity: 0;
     stroke-width: 0;
   }
@@ -370,7 +357,7 @@ body {
     stroke-width: 3;
   }
   20% {
-    stroke-dashoffset: 500;
+    stroke-dashoffset: 750;
     opacity: 0;
   }
   100% {
@@ -378,10 +365,9 @@ body {
     opacity: 0;
   }
 }
-
 @keyframes outline {
   0% {
-    stroke-dashoffset: -500;
+    stroke-dashoffset: -750;
     opacity: 0;
     stroke-width: 0;
   }
@@ -396,7 +382,7 @@ body {
     stroke-width: 3;
   }
   20% {
-    stroke-dashoffset: 500;
+    stroke-dashoffset: 750;
     opacity: 0;
   }
   100% {
@@ -404,7 +390,9 @@ body {
     opacity: 0;
   }
 }
-.dashed {
+.outline {
+  stroke-dashoffset: -750;
+  stroke-dasharray: 750 750;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-fill-mode: forwards;
@@ -415,10 +403,9 @@ body {
           animation-delay: 0s;
   transform-origin: center;
   transform-box: fill-box;
-  will-change: transform;
-  stroke-dashoffset: 0;
-  -webkit-animation-name: dashed;
-          animation-name: dashed;
+  will-change: transform, opacity;
+  -webkit-animation-name: outline;
+          animation-name: outline;
   opacity: 0;
 }
 
@@ -446,7 +433,7 @@ body {
   40%, 100% {
     opacity: 0;
     stroke-width: 0;
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 750;
   }
 }
 
@@ -474,13 +461,10 @@ body {
   40%, 100% {
     opacity: 0;
     stroke-width: 0;
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 750;
   }
 }
-.shadow {
-  filter: blur(3px);
-  stroke-dashoffset: 500;
-  stroke-dasharray: 500;
+.dashed {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-fill-mode: forwards;
@@ -491,54 +475,85 @@ body {
           animation-delay: 0s;
   transform-origin: center;
   transform-box: fill-box;
-  will-change: transform;
-  -webkit-animation-name: shadow;
-          animation-name: shadow;
+  will-change: transform, opacity;
+  stroke-dashoffset: 0;
+  -webkit-animation-name: dashed;
+          animation-name: dashed;
+  opacity: 0;
 }
 
 @-webkit-keyframes shadow {
   0% {
-    stroke-dashoffset: -500;
+    stroke-dashoffset: -750;
     opacity: 0;
-    stroke-width: 0;
   }
-  4% {
+  5% {
     stroke-dashoffset: 0;
-    opacity: 0.5;
-    stroke-width: 3;
+    opacity: 0.1;
   }
   10% {
     stroke-dashoffset: 0;
-    opacity: 0.5;
-    stroke-width: 3;
+    opacity: 0.1;
   }
-  20%, 100% {
-    stroke-dashoffset: 500;
+  20% {
+    stroke-dashoffset: 750;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: -750;
     opacity: 0;
   }
 }
 
 @keyframes shadow {
   0% {
-    stroke-dashoffset: -500;
+    stroke-dashoffset: -750;
     opacity: 0;
-    stroke-width: 0;
   }
-  4% {
+  5% {
     stroke-dashoffset: 0;
-    opacity: 0.5;
-    stroke-width: 3;
+    opacity: 0.1;
   }
   10% {
     stroke-dashoffset: 0;
-    opacity: 0.5;
-    stroke-width: 3;
+    opacity: 0.1;
   }
-  20%, 100% {
-    stroke-dashoffset: 500;
+  20% {
+    stroke-dashoffset: 750;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: -750;
     opacity: 0;
   }
 }
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .shadow {
+      stroke: rgba(51, 27, 97, 0.2);
+    }
+  }
+}
+.shadow {
+  overflow: visible;
+  stroke-dashoffset: -750;
+  stroke-dasharray: 750 750;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 24s;
+          animation-duration: 24s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  transform-origin: center;
+  will-change: transform;
+  -webkit-animation-name: shadow;
+          animation-name: shadow;
+  opacity: 0;
+  transform: translate(0, 0);
+  stroke-width: 2;
+  filter: blur(3px);
+}
+
 .arrow {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;

@@ -4588,6 +4588,7 @@
 	<symbol id="arrow" height="14.25" width="17.6" enable-background="new 0 0 17.6 14.26" viewBox="0 0 17.6 14.26">
 		<path class="st5" d="m13.18 7.26a.3.3 0 0 1 0-.26l4.15-7-17.33 7.08 17.6 7.18z" fill="#440EAA"/>
 	</symbol>
+	
 
 
 	<g class="instance" id="instance_1">
@@ -4602,7 +4603,7 @@
 			<circle class="st5" cx="475" cy="138" r="4"/>
 		</g>
 		<use id="arrow_1" class="arrow" href="#arrow" x="0" y="-7" height="14.25" width="17.6" />
-		<path class="shadow" style="fill:none;stroke:url(#shadow_gradient);" d="M177,111.5L474,138.5"/>
+		<path class="shadow" style="fill:none;stroke:#331B61;" d="M177,111.5L474,138.5"/>
 	</g>
 
 
@@ -4619,7 +4620,7 @@
 			<circle class="st5" cx="411.5" cy="174.6" r="4"/>
 		</g>
 		<use id="arrow_2" class="arrow" href="#arrow" x="0" y="-7" height="14.25" width="17.6" />
-		<path class="shadow" style="fill:none;stroke:url(#shadow_gradient);" d="M131.2,140.3l279.3,34.8"/>
+		<path class="shadow" style="fill:none;stroke:#331B61;" d="M131.2,140.3l279.3,34.8"/>
 	</g>
 
 
@@ -4636,7 +4637,7 @@
 			<circle class="st5" cx="641" cy="106" r="4"/>
 		</g>
 		<use id="arrow_3" class="arrow" href="#arrow" x="0" y="-7" height="14.25" width="17.6" />
-		<path class="shadow" style="fill:none;stroke:url(#shadow_gradient);" d="M220.9,173.8l419.4-66.9"/>
+		<path class="shadow" style="fill:none;stroke:#331B61;" d="M220.9,173.8l419.4-66.9"/>
 	</g>
 
 
@@ -4653,7 +4654,7 @@
 			<circle class="st5" cx="247.4" cy="237.7" r="4"/>
 		</g>
 		<use id="arrow_4" class="arrow" href="#arrow" x="0" y="-7" height="14.25" width="17.6" />
-		<path class="shadow" style="fill:none;stroke:url(#shadow_gradient);" d="M622.3,249.5l-373.9-11.3"/>
+		<path class="shadow" style="fill:none;stroke:#331B61;" d="M622.3,249.5l-373.9-11.3"/>
 	</g>
 
 
@@ -4669,7 +4670,7 @@
 			<circle class="st5" cx="129.8" cy="76.7" r="4"/>
 		</g>
 		<use id="arrow_5" class="arrow" href="#arrow" x="0" y="-7" height="14.25" width="17.6" />
-		<path class="shadow" style="fill:none;stroke:url(#shadow_gradient);" d="M386,62.5L130.8,77.2"/>
+		<path class="shadow" style="fill:none;stroke:#331B61;" d="M386,62.5L130.8,77.2"/>
 	</g>
 
 
@@ -4685,7 +4686,7 @@
 			<circle class="st5" cx="174.2" cy="159.4" r="4"/>
 		</g>
 		<use id="arrow_6" class="arrow" href="#arrow" x="0" y="-7" height="14.25" width="17.6" />
-		<path class="shadow" style="fill:none;stroke:url(#shadow_gradient);" d="M427.2,149.3l-252,10.6"/>
+		<path class="shadow" style="fill:none;stroke:#331B61;" d="M427.2,149.3l-252,10.6"/>
 	</g>
 
 	<g class="instance" id="instance_7">
@@ -4700,7 +4701,7 @@
 			<circle class="st5" cx="640.6" cy="234.1" r="4"/>
 		</g>
 		<use id="arrow_7" class="arrow" href="#arrow" x="0" y="-7" height="14.25" width="17.6" />
-		<path class="shadow" style="fill:none;stroke:url(#shadow_gradient);" d="M214.9,79.1l424.5,155.4"/>
+		<path class="shadow" style="fill:none;stroke:#331B61;" d="M214.9,79.1l424.5,155.4"/>
 	</g>
 
 	<g class="instance" id="instance_8">
@@ -4715,8 +4716,7 @@
 			<circle class="st5" cx="529.6" cy="72.8" r="4"/>
 		</g>
 		<use id="arrow_8" class="arrow" href="#arrow" x="0" y="-7" height="14.25" width="17.6" />
-		<path class="shadow" style="fill:none;stroke:url(#shadow_gradient);" d="M234.8,187.6L528.9,73.7"/>
+		<path class="shadow" style="fill:none;stroke:#331B61;" d="M234.8,187.6L528.9,73.7"/>
 	</g>
-
 
 </svg>

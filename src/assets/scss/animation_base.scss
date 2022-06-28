@@ -1,4 +1,6 @@
 .source {
+    z-index: 99;
+    position: relative;
 
     circle {
         animation-iteration-count: infinite;
@@ -7,7 +9,7 @@
         animation-delay: 0s;
         transform-origin: center;
         transform-box: fill-box;
-        will-change: transform;
+        will-change: transform, opacity;
         opacity: 0;
 
         &.st6 {
@@ -68,9 +70,11 @@
     animation-delay: 0s;
     transform-origin: center;
     transform-box: fill-box;
-    will-change: transform;
+    will-change: transform, opacity;
     animation-name: target_ani;
     opacity: 0;
+    position: relative;
+    z-index: 99;
 }
 
 
@@ -212,26 +216,11 @@
 }
 
 
-.outline {
-    stroke-dashoffset: -500;
-    stroke-dasharray: 500;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    animation-duration: 24s;
-    animation-delay: 0s;
-    transform-origin: center;
-    transform-box: fill-box;
-    will-change: transform;
-    animation-name: outline;
-    opacity: 0;
-
-}
-
 
 @keyframes outline {
 
     0% {
-        stroke-dashoffset: -500;
+        stroke-dashoffset: -750;
         opacity: 0;
         stroke-width: 0;
     }
@@ -249,7 +238,7 @@
     }
 
     20% {
-        stroke-dashoffset: 500;
+        stroke-dashoffset: 750;
         opacity: 0;
     }
 
@@ -260,18 +249,17 @@
 }
 
 
-
-
-.dashed {
+.outline {
+    stroke-dashoffset: -750;
+    stroke-dasharray: 750 750;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-duration: 24s;
     animation-delay: 0s;
     transform-origin: center;
     transform-box: fill-box;
-    will-change: transform;
-    stroke-dashoffset: 0;
-    animation-name: dashed;
+    will-change: transform, opacity;
+    animation-name: outline;
     opacity: 0;
 }
 
@@ -307,25 +295,22 @@
     100% {
         opacity: 0;
         stroke-width: 0;
-        stroke-dashoffset: 100;
+        stroke-dashoffset: 750;
     }
 }
 
 
-.shadow {
-    filter: blur(3px);
-
-    stroke-dashoffset: 500;
-    stroke-dasharray: 500;
-
+.dashed {
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-duration: 24s;
     animation-delay: 0s;
     transform-origin: center;
     transform-box: fill-box;
-    will-change: transform;
-    animation-name: shadow;
+    will-change: transform, opacity;
+    stroke-dashoffset: 0;
+    animation-name: dashed;
+    opacity: 0;
 }
 
 
@@ -333,30 +318,61 @@
 @keyframes shadow {
 
     0% {
-        stroke-dashoffset: -500;
+        stroke-dashoffset: -750;
         opacity: 0;
-        stroke-width: 0;
     }
 
-    4% {
+    5% {
         stroke-dashoffset: 0;
-        opacity: 0.5;
-        stroke-width: 3;
+        opacity: 0.1;
     }
 
     10% {
         stroke-dashoffset: 0;
-        opacity: 0.5;
-        stroke-width: 3;
+        opacity: 0.1;
     }
 
-    20%,
+    20% {
+        stroke-dashoffset: 750;
+        opacity: 0;
+    }
+
     100% {
-        stroke-dashoffset: 500;
+        stroke-dashoffset: -750;
         opacity: 0;
     }
 }
 
+
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+         
+        .shadow {
+            stroke: rgba(#331B61, 0.2);
+        }
+    }
+}
+
+
+
+.shadow {
+    overflow: visible;
+
+    stroke-dashoffset: -750;
+    stroke-dasharray: 750 750;
+
+    animation-iteration-count: infinite;
+    animation-duration: 24s;
+    animation-delay: 0s;
+    transform-origin: center;
+    will-change: transform;
+    animation-name: shadow;
+    opacity: 0;
+    transform: translate(0, 0);
+    stroke-width: 2;
+    filter: blur(3px);
+    
+}
 
 
 .arrow {
@@ -434,3 +450,5 @@
 #arrow_8 {
     offset-path: path("M234.8,186.5c39-94.1,215.9-151.4,294.4-114.6");
 }
+
+
